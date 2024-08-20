@@ -336,7 +336,7 @@ export default function Home() {
                     </dt>
                     <DisclosurePanel as="dd" className="mt-2 pr-12">
                     <ul className='mt-4 space-y-2'>
-                        {job.description && job.description.map((description, i) => <li className='flex gap-x-3 text-slate-400'>
+                        {job.description && job.description.map((description, i) => <li className='flex gap-x-3 text-slate-400' key={job.name}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-7 w-5 flex-none text-cyan-400">
                           <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg> {description}
@@ -344,7 +344,7 @@ export default function Home() {
                       </ul>
                       <div className='flex flex-wrap gap-2 mt-4'>
                       {job.skill && job.skill.map((skill, i) =>
-                        <span className="inline-flex items-center rounded-md bg-cyan-400/10 px-2 py-1 text-xs font-medium text-cyan-400 ring-1 ring-inset ring-cyan-400/20">
+                        <span key={skill} className="inline-flex items-center rounded-md bg-cyan-400/10 px-2 py-1 text-xs font-medium text-cyan-400 ring-1 ring-inset ring-cyan-400/20">
                             {skill}
                         </span>
                       )}
@@ -362,7 +362,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl lg:mx-20">
           <h2 className="text-2xl font-bold tracking-tight text-gray-300 sm:text-2xl mb-8">Project Showcase</h2>
             {caseStudies.map((caseStudy, i) => ( 
-                <article className='mb-10'>
+                <article key={caseStudy.client} className='mb-10'>
                   <div className="grid grid-cols-2 gap-x-8 gap-y-8 mt-4">
                     <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                       <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
