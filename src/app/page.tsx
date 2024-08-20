@@ -6,6 +6,8 @@ import { Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel } fr
 import { Bars3Icon, XMarkIcon, MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
 import profileImage from "/public/images/profile.png"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const currentYear = new Date().getFullYear()
 
