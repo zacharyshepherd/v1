@@ -336,14 +336,14 @@ export default function Home() {
                     </dt>
                     <DisclosurePanel as="dd" className="mt-2 pr-12">
                     <ul className='mt-4 space-y-2'>
-                        {job.description && job.description.map((description, i) => <li className='flex gap-x-3 text-slate-400' key={i}>
+                        {job.description && job.description.map((description) => <li className='flex gap-x-3 text-slate-400'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-7 w-5 flex-none text-cyan-400">
                           <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg> {description}
                           </li>)}
                       </ul>
                       <div className='flex flex-wrap gap-2 mt-4'>
-                      {job.skill && job.skill.map((skill, i) =>
+                      {job.skill && job.skill.map((skill) =>
                         <span className="inline-flex items-center rounded-md bg-cyan-400/10 px-2 py-1 text-xs font-medium text-cyan-400 ring-1 ring-inset ring-cyan-400/20">
                             {skill}
                         </span>
