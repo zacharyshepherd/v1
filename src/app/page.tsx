@@ -160,7 +160,6 @@ const jobs = [
 ]
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <main className='max-w-7xl w-full px-8 mx-auto'>
       {/* Header */}
@@ -178,16 +177,6 @@ export default function Home() {
             </button>        
             </div>
             <div className='flex lg:gap-x-12'>
-              <div className="flex lg:hidden">
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(true)}
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-              >
-                <span className="sr-only">Open main menu</span>
-                <Bars3Icon aria-hidden="true" className="h-6 w-6" />
-              </button>
-            </div>
             <div className="hidden lg:flex lg:gap-x-12 items-center">
               {navigation.main.map((item) => (
                 <button key={item.name} className="text-sm target font-semibold leading-6 text-gray-300" onClick={() => {
@@ -206,52 +195,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-        
         </nav>
-        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-          <div className="fixed inset-0 z-10" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-7 w-5 flex-none text-cyan-400">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-              </a>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-400"
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/25">
-                <div className="space-y-2 py-6">
-                  {navigation.main.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                  >
-                    Log in
-                  </a>
-                </div>
-              </div>
-            </div>
-          </DialogPanel>
-        </Dialog>
       </header>
 
       {/* HERO */}
@@ -283,7 +227,7 @@ export default function Home() {
             <div className="mx-auto max-w-7xl lg:mx-32">
               <h2 className="text-2xl font-bold tracking-tight text-slate-200 sm:text-2xl mb-8">About Me</h2>
               <div className="grid grid-cols-1 gap-x-10 gap-y-16 sm:gap-y-20 lg:grid-cols-3 lg:items-start">
-                <div className="col-span-2 px-6 lg:px-0 lg:pr-4">
+                <div className="col-span-2 lg:pr-4">
                     <p className="leading-8 text-slate-400">
                       Hello! My name is Zachary, and I enjoy creating things that live on the internet. My interest in web development started back in 2012 at Jordan Applied Technology Center 
                       when I built my first wordpress theme — it sparked a passion for coding and taught me a lot about the fundamentals of web development.
@@ -308,7 +252,7 @@ export default function Home() {
                       <Image
                       alt="Zachary Shepherd Profile Image"
                       src={profileImage}
-                      className="w-100 max-w-[300px] rounded pt-4 bg-slate-800" />
+                      className="w-100 max-w-[300px] m-auto rounded pt-4 bg-slate-800" />
                     </div>
                 </div>
               </div>
@@ -318,7 +262,7 @@ export default function Home() {
 
         {/* EXPERINCE */}
         <section id='experience' className='overflow-hidden py-20 sm:py-32'>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl lg:px-8">
             <div className="mx-auto max-w-4xl divide-y divide-white/10">
             <h2 className="text-2xl font-bold tracking-tight text-gray-300 sm:text-2xl mb-8">Where I’ve Worked</h2>
               <dl className="mt-10 space-y-6 divide-y divide-white/10">
@@ -326,7 +270,7 @@ export default function Home() {
                   <Disclosure defaultOpen={i==0?true:false} key={i + 1} as="div" className="pt-6">
                     <dt>
                       <DisclosureButton className="group flex w-full items-start justify-between text-left text-slate-200">
-                        <span className="text-base font-semibold leading-7">{job.title} <a href={job.link} target='_blank' className='text-cyan-400'>@ {job.name}</a></span>
+                        <span className="text-base font-semibold leading-7">{job.title} <a href={job.link} target='_blank' className='text-cyan-400 text-nowrap'>@ {job.name}</a></span>
                         <span className="ml-6 flex h-7 items-center">
                           <span className='mr-4'>{job.date}</span>
                           <PlusSmallIcon aria-hidden="true" className="h-6 w-6 group-data-[open]:hidden" />
@@ -405,7 +349,7 @@ export default function Home() {
 
         {/* CONTACT */}
         <section id='contact' className='overflow-hidden py-20 sm:py-32 text-center max-w-2xl mx-auto'>
-          <h2 className='text-5xl text-gray-300 font-bold pb-4'>Contact Me</h2>
+          <h2 className='text-2xl font-bold tracking-tight text-gray-300 sm:text-2xl mb-8'>Contact Me</h2>
           <p className='leading-8 text-slate-400 pb-5'>While I’m not actively seeking new opportunities at the moment, my inbox is always open. If you have any questions or just want to connect, feel free to reach out—I’d be happy to hear from you!</p>
           <a href="mailto:zacharyshepherd@outlook.com" className="text-lg inline-block font-semibold leading-6 rounded-lg border-2 border-cyan-400 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-cyan-600 focus-visible:outline focus-visible:border-2 focus-visible:outline-border-2 focus-visible:outline-cyan-600">
               Say Hello  
