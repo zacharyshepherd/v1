@@ -84,7 +84,7 @@ const navigation = {
 const caseStudies = [
   {
     client: "ADS dental transitions",
-    preview: require("/public/images/logos/ads-preview.webp"),
+    preview: require("/public/images/ads-preview.webp"),
     service:"Lead Developer",
     href: "https://www.adstransitions.com/",
     date: "Januarary 2019",
@@ -95,7 +95,7 @@ const caseStudies = [
   },
   {
     client: "Nurturing Parenting",
-    preview: require("/public/images/logos/parenting-preview.webp"),
+    preview: require("/public/images/parenting-preview.webp"),
     service:"Lead Developer",
     href: "https://www.nurturingparenting.com/",
     date: "Januarary 2019",
@@ -105,7 +105,7 @@ const caseStudies = [
   },
   {
     client: "R&O Construction",
-    preview: require("/public/images/logos/randoco-preview.webp"),
+    preview: require("/public/images/randoco-preview.webp"),
     service:"Lead Developer",
     href: "https://www.randoco.com/",
     date: "Januarary 2019",
