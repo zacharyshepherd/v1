@@ -175,6 +175,7 @@ export default function Home() {
         </nav>
       </header>
 
+      {/* Hero */}
       <section id='hero' className="relative isolate flex h-screen">
             <div className="w-full m-auto">
                 <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-4xl">
@@ -326,20 +327,18 @@ export default function Home() {
 
         {/* CONTACT */}
         <section id='contact' className='overflow-hidden py-20 sm:py-32 text-center max-w-2xl mx-auto'>
-          <h2 className='text-2xl font-bold tracking-tight text-gray-300 sm:text-2xl mb-8'>Contact Me</h2>
+          <h2 className='text-2xl font-bold tracking-tight text-gray-300 sm:text-4xl mb-8'>Contact Me</h2>
           <p className='leading-8 text-slate-400 pb-5'>While I’m not actively seeking new opportunities at the moment, my inbox is always open. If you have any questions or just want to connect, feel free to reach out—I’d be happy to hear from you!</p>
-          <a href="mailto:zacharyshepherd@outlook.com" className="text-lg inline-block font-semibold leading-6 rounded-lg border-2 border-cyan-400 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-cyan-600 focus-visible:outline focus-visible:border-2 focus-visible:outline-border-2 focus-visible:outline-cyan-600">
-              Say Hello  
-          </a>
+          <div className='mt-8'>
+            <a href="mailto:zacharyshepherd@outlook.com" className="text-sm font-semibold leading-6 rounded-md border-2 border-cyan-400 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-cyan-600 focus-visible:border focus-visible:border-2 focus-visible:border-spacing-2 focus-visible:border-cyan-600">
+                Say Hello  
+            </a>
+          </div>
         </section>
-
-        
-        
-
 
         {/* FOOTER */}
         <footer>
-          <div className="mx-auto lg:block hidden max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+          <div className="mx-auto text-center max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
             <nav aria-label="Footer" className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12">
               {navigation.main.map((item) => (
                 <div key={item.name} className="pb-6">
