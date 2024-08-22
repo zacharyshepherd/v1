@@ -7,7 +7,7 @@
 </p>
 
 <p dir="auto">
-  <a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/zacharyshepherd/v1/main/public/.webp">
+  <a target="_blank" rel="noopener noreferrer nofollow" href="https://zacharyshepherd.com"">
     <img src="https://raw.githubusercontent.com/zacharyshepherd/v1/main/public/images/demo.webp" alt="demo" style="max-width: 100%;">
   </a>
 </p>
