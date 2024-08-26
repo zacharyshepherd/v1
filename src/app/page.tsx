@@ -140,7 +140,7 @@ export default function Home() {
   return (
     <main className='max-w-7xl w-full px-8 mx-auto'>
       {/* Header */}
-      <header className='fixed bg-slate-900 bg-opacity-90 backdrop-blur w-full py-6 lg:px-8 m-auto top-0 left-0 z-50'>
+      <header className='fixed md:block hidden bg-slate-900 bg-opacity-90 backdrop-blur w-full py-6 lg:px-8 m-auto top-0 left-0 z-50'>
         <nav aria-label="Global" className="mx-auto flex items-center justify-between px-6">
           <div className="flex lg:flex-1">
             <button className="-m-1.5 p-1.5" onClick={() => {
