@@ -167,7 +167,7 @@ export default function Home() {
               ))}
             </div>
             <div className="hidden lg:flex">
-              <a href="#" className="text-sm font-semibold leading-6 rounded-md border-2 border-cyan-400 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-cyan-600 focus-visible:border focus-visible:border-2 focus-visible:border-spacing-2 focus-visible:border-cyan-600">
+              <a href="/resume.pdf" target='_blank' className="text-sm font-semibold leading-6 rounded-md border-2 border-cyan-400 px-3.5 py-2.5 font-semibold text-white shadow-sm hover:bg-cyan-600 focus-visible:border focus-visible:border-2 focus-visible:border-spacing-2 focus-visible:border-cyan-600">
                 Resume <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
@@ -189,7 +189,7 @@ export default function Home() {
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                     <a
-                    href="#"
+                    href="/resume.pdf" target='_blank'
                     className="rounded-md border-2 border-cyan-400 px-3.5 py-2.5 text-sm font-semibold text-slate-200 shadow-sm hover:bg-cyan-600 focus-visible:border focus-visible:border-2 focus-visible:border-spacing-2 focus-visible:border-cyan-600"
                     >
                     View Resume                
