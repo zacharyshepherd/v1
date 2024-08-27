@@ -45,7 +45,7 @@ const navigation = {
     },
     {
       name: 'Linkedin',
-      href: 'https://www.linkedin.com/in/',
+      href: 'https://www.linkedin.com/in/zachary-shepherd/',
       icon: (
         <svg fill="currentColor" aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24">
           <path
